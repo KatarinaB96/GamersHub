@@ -12,11 +12,12 @@ This mobile application allows users to explore games based on different genres.
 - Local storage managed with Room Database
 - Asynchronous operations managed using Coroutines
 - SharedPreferences to track guest user status
+- Navigation managed through NavGraph
 
 ## Tech Stack
 
 - Kotlin
-- Android Jetpack components (ViewModel, LiveData, Room)
+- Android Jetpack components
 - Retrofit for network requests
 - Hilt for dependency injection
 - Coroutines for asynchronous programming
