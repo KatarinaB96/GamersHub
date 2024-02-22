@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">GamersHub</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_as_a_guest">Sign in as a guest</string>
+    <string name="web_client_id">332308876461-o762vgckefjru30bchhnenv3q3sare6k.apps.googleusercontent.com</string>
+
+    <string name="explore_rawg_video_games_database_api">Explore RAWG Video\nGames Database API</string>
+    <string name="rawg_is_the_largest_video_game_ndatabase_and_game_discovery_service">RAWG is the largest video game\ndatabase and game discovery service</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagegenre">imageGenre</string>
+    <string name="show_me_the_games">Show me the games!</string>
+    <string name="visit_game_website">Visit game website:</string>
+    <string name="game_was_released">Game was released: %1$s</string>
+    <string name="sign_out">Sign out</string>
+    <string name="change_genres">Change genres</string>
+    <string name="return_to_the_main_screen">Return to the main screen</string>
+    <string name="error_title">Error!</string>
+    <string name="defautl_error_message">An error has occurred!</string>
+    <string name="sign_in_error">Unable to sign in</string>
+    <string name="game_website_html"><![CDATA[<p> For more details, please visit: <a href=\"%1$s\">%2$s</a></p>]]></string>
+</resources>
