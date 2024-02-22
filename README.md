@@ -13,6 +13,10 @@ This mobile application allows users to explore games based on different genres.
 - Asynchronous operations managed using Coroutines
 - SharedPreferences to track guest user status
 - Navigation managed through NavGraph
+- BaseViewModel for Error Handling
+- BaseFragment for Error Message Dialog
+- Pagination
+
 
 
   The design decisions were made with user experience, maintainability, and scalability in mind:
@@ -27,6 +31,9 @@ This mobile application allows users to explore games based on different genres.
 8. Asynchronous operations managed using Coroutines: Coroutines offer a concise and intuitive way to handle asynchronous programming tasks in Kotlin. 
 9. SharedPreferences serve as a lightweight tool for storing minimal user data, perfectly suited for determining if the user is signed in as a guest.
 10. Navigation managed through NavGraph: NavGraph facilitates the implementation of a structured and predictable navigation flow within the app.
+11. BaseViewModel for Error Handling: Implementing a BaseViewModel allows you to centralize error handling logic, making it easier to manage errors across different view models.
+12. BaseFragment for Error Message Dialog: By creating a BaseFragment that handles the display of error message dialogs.
+13. Implementing pagination for loading more games.
 
 ## Tech Stack
 
