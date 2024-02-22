@@ -30,6 +30,7 @@ class GameDetailsFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val gameId = args.gameId
+        showLoadingIndicator()
         gameDetailsViewModel.loadGameDetails(gameId)
         observeData()
         setViewModel(gameDetailsViewModel)
@@ -38,9 +39,11 @@ class GameDetailsFragment : BaseFragment() {
     private fun observeData() {
         binding.apply {
             gameDetailsViewModel.gameDetailsObservable.observe(viewLifecycleOwner) { game ->
+                hideLoadingIndicator()
+
                 Glide.with(requireParentFragment())
                     .load(game.backgroundImage)
-                    .apply(RequestOptions.bitmapTransform(RoundedCorners(28)))
+                    .apply(RequestOptions.bitmapTransform(RoundedCorners(CORNER_RADIUS)))
                     .into(gameImage)
 
                 val htmlString = getString(R.string.game_website_html, game.website, game.website)
@@ -52,5 +55,17 @@ class GameDetailsFragment : BaseFragment() {
                 gameWebsite.text = HtmlCompat.fromHtml(htmlString, HtmlCompat.FROM_HTML_MODE_LEGACY)
             }
         }
+    }
+
+    private fun showLoadingIndicator() {
+        binding.loadingIndicator.visibility = View.VISIBLE
+    }
+
+    private fun hideLoadingIndicator() {
+        binding.loadingIndicator.visibility = View.GONE
+    }
+
+    companion object {
+        private const val CORNER_RADIUS = 28
     }
 }

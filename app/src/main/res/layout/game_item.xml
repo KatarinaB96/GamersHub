@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemContainer"
-    android:backgroundTint="@color/gray"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
-    app:cardCornerRadius="15dp"
-    android:orientation="vertical">
+    android:backgroundTint="@color/gray"
+    android:orientation="vertical"
+    app:cardCornerRadius="15dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content">
 
         <ImageView
@@ -27,28 +26,29 @@
 
         <TextView
             android:id="@+id/gameName"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:layout_marginHorizontal="16dp"
             android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/gameRating"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/gameImage"
             app:layout_constraintTop_toBottomOf="@id/gameImage"
-          />
+            tools:text="a story about my uncle" />
 
         <RatingBar
             android:id="@+id/gameRating"
-            android:layout_width="wrap_content"
             style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:numStars="5"
-            android:isIndicator="true"
             android:layout_marginBottom="10dp"
+            android:isIndicator="true"
+            android:numStars="5"
             android:theme="@style/RatingBar"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
 
