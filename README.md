@@ -16,6 +16,7 @@ This mobile application allows users to explore games based on different genres.
 - BaseViewModel for Error Handling
 - BaseFragment for Error Message Dialog
 - Pagination
+- Users can sign in as guests or choose to sign in with Google
 
 
 
