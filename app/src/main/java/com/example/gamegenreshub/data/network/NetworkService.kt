@@ -11,7 +11,7 @@ import retrofit2.http.Query
 interface NetworkService {
 
     @GET("genres")
-    suspend fun getGenres(@Query("key") apiKey: String): GenresResponse
+    suspend fun getGenres(@Query("key") apiKey: String): Response<GenresResponse>
 
     @GET("games/{id}")
     suspend fun getGameDetails(

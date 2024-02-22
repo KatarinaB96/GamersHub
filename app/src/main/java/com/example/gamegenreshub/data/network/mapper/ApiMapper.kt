@@ -9,7 +9,7 @@ import com.example.gamegenreshub.domain.models.Genres
 import retrofit2.Response
 
 interface ApiMapper {
-    fun toGenres(response: GenresResponse): Genres
+    fun toGenres(response: Response<GenresResponse>): Genres
     fun toGames(response: Response<GamesByGenresResponse>): GamesByGenres
     fun toGameDetails(response: Response<GamesResponse>): Game
 }

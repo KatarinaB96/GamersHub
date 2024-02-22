@@ -12,8 +12,13 @@ import retrofit2.Response
 
 class ApiMapperImpl : ApiMapper {
 
-    override fun toGenres(response: GenresResponse): Genres {
-        return Genres(response.count, response.next, response.previous, toGenreDetails(response.results))
+    override fun toGenres(response: Response<GenresResponse>): Genres {
+        if (response.isSuccessful) {
+            val body = response.body()
+            return Genres(body?.count ?: 0, body?.next.orEmpty(), body?.previous.orEmpty(), toGenreDetails(body?.results.orEmpty()))
+        } else {
+            throw Exception(response.message())
+        }
     }
 
     override fun toGames(response: Response<GamesByGenresResponse>): GamesByGenres {
